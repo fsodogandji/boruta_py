@@ -187,7 +187,7 @@ class BorutaPy(BaseEstimator, TransformerMixin):
 
     def get_params(self, deep=True):
      # suppose this estimator has parameters "alpha" and "recursive"
-       return {"estimator": self.estimator, "n_estimators": self.n_estimators, "perc": self.perc, "alpha", self.alpha, "two_step": self.two_step, "random_state": self.random_state }
+       return {"estimator": self.estimator, "n_estimators": self.n_estimators, "perc": self.perc, "alpha": self.alpha, "two_step": self.two_step, "random_state": self.random_state }
 
     def fit(self, X, y):
         """
