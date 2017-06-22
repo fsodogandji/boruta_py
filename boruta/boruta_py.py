@@ -185,6 +185,10 @@ class BorutaPy(BaseEstimator, TransformerMixin):
         self.random_state = random_state
         self.verbose = verbose
 
+    def get_params(self, deep=True):
+     # suppose this estimator has parameters "alpha" and "recursive"
+       return {"estimator": self.estimator, "n_estimators": self.n_estimators, "perc": self.perc, "alpha", self.alpha, "two_step": self.two_step, "random_state": self.random_state }
+
     def fit(self, X, y):
         """
         Fits the Boruta feature selection with the provided estimator.
